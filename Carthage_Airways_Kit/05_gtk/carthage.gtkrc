@@ -1,0 +1,140 @@
+# =====================================================================
+#  carthage.gtkrc  -  Theme GTK2 commun Carthage Airways
+#  Charge dans main.c AVANT create_window... :  gtk_rc_parse("carthage.gtkrc");
+#  Ne pas modifier seul : toute modif se decide en groupe (meme rendu
+#  pour les 6 modules).
+# =====================================================================
+#  Palette :
+#   #0B3D6B bleu marine (principal)   #2E6EB7 bleu moyen (survol/selection)
+#   #A7C7E7 bleu clair (accent)       #F2F7FC bleu tres clair (fond)
+#   #1F1F1F gris fonce (textes)       #F5B301 dore  |  #2ECC71 vert
+# =====================================================================
+
+# ---------- Style par defaut : fenetres, labels, champs ----------
+style "ca-defaut"
+{
+  font_name = "Roboto 10"
+
+  bg[NORMAL]        = "#F2F7FC"
+  bg[PRELIGHT]      = "#E3ECF5"
+  bg[SELECTED]      = "#2E6EB7"
+  bg[INSENSITIVE]   = "#E9EEF4"
+
+  fg[NORMAL]        = "#1F1F1F"
+  fg[SELECTED]      = "#FFFFFF"
+  fg[INSENSITIVE]   = "#9AA8B8"
+
+  base[NORMAL]      = "#FFFFFF"
+  base[SELECTED]    = "#2E6EB7"
+  base[ACTIVE]      = "#A7C7E7"
+  base[INSENSITIVE] = "#F2F7FC"
+
+  text[NORMAL]      = "#1F1F1F"
+  text[SELECTED]    = "#FFFFFF"
+  text[ACTIVE]      = "#0B3D6B"
+}
+class "GtkWidget" style "ca-defaut"
+
+# ---------- Boutons (principal = bleu marine) ----------
+style "ca-bouton"
+{
+  font_name = "Montserrat SemiBold 10"
+  xthickness = 6
+  ythickness = 4
+
+  bg[NORMAL]      = "#0B3D6B"
+  bg[PRELIGHT]    = "#2E6EB7"
+  bg[ACTIVE]      = "#082F52"
+  bg[INSENSITIVE] = "#E3ECF5"
+
+  fg[NORMAL]      = "#FFFFFF"
+  fg[PRELIGHT]    = "#FFFFFF"
+  fg[ACTIVE]      = "#FFFFFF"
+  fg[INSENSITIVE] = "#9AB3CC"
+}
+widget_class "*GtkButton*" style "ca-bouton"
+
+# ---------- Bouton secondaire (Annuler, Retour) ----------
+# Dans Glade : propriete "Nom" du bouton commencant par btn_sec  (ex. btn_sec_annuler)
+style "ca-bouton-secondaire" = "ca-bouton"
+{
+  bg[NORMAL]   = "#FFFFFF"
+  bg[PRELIGHT] = "#E3ECF5"
+  bg[ACTIVE]   = "#A7C7E7"
+  fg[NORMAL]   = "#0B3D6B"
+  fg[PRELIGHT] = "#0B3D6B"
+  fg[ACTIVE]   = "#0B3D6B"
+}
+widget "*btn_sec*" style "ca-bouton-secondaire"
+
+# ---------- Bouton accent (Nouveau, Reserver) ----------
+# Nom Glade commencant par btn_acc  (ex. btn_acc_nouveau)
+style "ca-bouton-accent" = "ca-bouton"
+{
+  bg[NORMAL]   = "#F5B301"
+  bg[PRELIGHT] = "#FFC633"
+  bg[ACTIVE]   = "#D99E00"
+  fg[NORMAL]   = "#1F1F1F"
+  fg[PRELIGHT] = "#1F1F1F"
+  fg[ACTIVE]   = "#1F1F1F"
+}
+widget "*btn_acc*" style "ca-bouton-accent"
+
+# ---------- Titres d'ecran ----------
+# Nom Glade commencant par lbl_titre  (ex. lbl_titre_avions)
+style "ca-titre"
+{
+  font_name  = "Montserrat Bold 18"
+  fg[NORMAL] = "#0B3D6B"
+}
+widget "*lbl_titre*" style "ca-titre"
+
+# ---------- Sous-titres / titres de cadres ----------
+style "ca-soustitre"
+{
+  font_name  = "Montserrat SemiBold 12"
+  fg[NORMAL] = "#0B3D6B"
+}
+widget "*lbl_sous*" style "ca-soustitre"
+widget_class "*GtkFrame.GtkLabel" style "ca-soustitre"
+
+# ---------- Messages ----------
+style "ca-succes"  { fg[NORMAL] = "#1E9E57" font_name = "Roboto Medium 10" }
+style "ca-erreur"  { fg[NORMAL] = "#C0392B" font_name = "Roboto Medium 10" }
+widget "*lbl_succes*" style "ca-succes"
+widget "*lbl_erreur*" style "ca-erreur"
+
+# ---------- Tableaux (GtkTreeView) ----------
+style "ca-tableau"
+{
+  font_name = "Roboto 10"
+  GtkTreeView::even-row-color = "#FFFFFF"
+  GtkTreeView::odd-row-color  = "#F2F7FC"
+  base[SELECTED] = "#2E6EB7"
+  base[ACTIVE]   = "#A7C7E7"
+  text[SELECTED] = "#FFFFFF"
+  text[ACTIVE]   = "#0B3D6B"
+}
+class "GtkTreeView" style "ca-tableau"
+
+# En-tetes de colonnes : bleu clair, texte marine
+style "ca-entete-colonne"
+{
+  font_name  = "Montserrat SemiBold 10"
+  bg[NORMAL]   = "#A7C7E7"
+  bg[PRELIGHT] = "#C4DAEF"
+  fg[NORMAL]   = "#0B3D6B"
+  fg[PRELIGHT] = "#0B3D6B"
+}
+widget_class "*GtkTreeView.GtkButton*" style "ca-entete-colonne"
+
+# ---------- Barre de menu ----------
+style "ca-menu"
+{
+  font_name = "Montserrat 10"
+  bg[NORMAL]   = "#0B3D6B"
+  fg[NORMAL]   = "#FFFFFF"
+  bg[PRELIGHT] = "#2E6EB7"
+  fg[PRELIGHT] = "#FFFFFF"
+}
+widget_class "*GtkMenuBar*" style "ca-menu"

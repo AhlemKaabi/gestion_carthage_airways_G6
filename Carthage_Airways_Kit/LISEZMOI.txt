@@ -1,0 +1,84 @@
+=====================================================================
+ KIT GRAPHIQUE CARTHAGE AIRWAYS - commun aux 6 modules
+ Projet Programmation C (APP-44) - ESPRIT 2026-2027
+=====================================================================
+Regle d'or : tout le monde utilise CES fichiers, sans les modifier
+seul. Une app qui a l'air d'etre UNE seule app = meilleure integration
+(AA7, 13 %) et meilleure impression au Bal des projets.
+
+CONTENU
+---------------------------------------------------------------------
+01_logo/      logos horizontaux (couleur / blanc / noir), icone seule,
+              icone d'application 16 a 256 px (pour la fenetre)
+02_icones/    icones plates : vols, avions, passagers, personnel,
+              aeroports, reservations, parametres, statistiques,
+              rechercher, ajouter, modifier, supprimer, deconnexion
+              -> _bleu_ (sur fond clair) / _blanc_ (sur bouton bleu)
+              -> 24 px (boutons) et 48 px (menus / tableau de bord)
+03_images/    fond_connexion (ecran login), fond_ecrans_internes,
+              bandeau_entete (en haut de chaque fenetre)
+              inspiration_* = petites photos de la charte (basse
+              resolution, a remplacer par de vraies photos libres)
+04_polices/   Montserrat (titres, boutons) + Roboto (texte, tableaux)
+05_gtk/       carthage.gtkrc (theme GTK2), couleurs.h, demo/
+06_reference/ charte_graphique_poster.png, palette.png,
+              apercu_theme_gtk.png (resultat attendu)
+
+1) INSTALLER LES POLICES (une fois, dans la VM Ubuntu)
+---------------------------------------------------------------------
+   mkdir -p ~/.fonts
+   cp 04_polices/*.ttf ~/.fonts/
+   fc-cache -fv
+   fc-list | grep -iE "montserrat|roboto"     (doit afficher les polices)
+
+2) TESTER LE THEME (2 minutes)
+---------------------------------------------------------------------
+   cd 05_gtk/demo
+   make
+   ./demo_theme
+   -> la fenetre doit ressembler a 06_reference/apercu_theme_gtk.png
+
+3) DANS VOTRE PROJET GLADE
+---------------------------------------------------------------------
+ a) Copier les images utilisees dans le dossier pixmaps/ du projet
+    (Glade 2 y cherche les images via create_pixmap()).
+ b) Copier carthage.gtkrc a la racine du projet et couleurs.h dans src/.
+ c) Dans src/main.c, juste APRES gtk_set_locale()/gtk_init() et AVANT
+    create_window...() :
+         gtk_rc_parse("carthage.gtkrc");
+    (chemin relatif au dossier d'ou on LANCE le programme)
+ d) Noms des widgets dans Glade (onglet Widget > Nom) :
+       btn_...        bouton principal bleu marine (par defaut)
+       btn_sec_...    bouton secondaire (Annuler, Retour)
+       btn_acc_...    bouton accent dore (Nouveau, Reserver)
+       lbl_titre_...  titre d'ecran (Montserrat Bold 18)
+       lbl_sous_...   sous-titre (Montserrat SemiBold 12)
+       lbl_succes_... / lbl_erreur_...   messages vert / rouge
+    Exemple module avions : btn_acc_nouveau_avion, lbl_titre_avions
+ e) Icone de la fenetre : propriete "Icone" de la fenetre dans Glade
+    -> icone_application_48.png
+ f) Treeview : cocher "Rules Hint" -> lignes alternees blanc / bleu clair
+
+PALETTE
+---------------------------------------------------------------------
+ #0B3D6B bleu marine  principal : boutons, titres, menu
+ #2E6EB7 bleu moyen   survol, selection
+ #A7C7E7 bleu clair   en-tetes de tableau, accent
+ #F2F7FC bleu tres clair  fond des fenetres
+ #1F1F1F gris fonce   texte
+ #F5B301 dore         1 seul bouton important par ecran
+ #2ECC71 vert         succes / "Actif"     #C0392B rouge  erreur / "Bloque"
+
+POLICES
+---------------------------------------------------------------------
+ Montserrat : titres, menus, boutons   Roboto : texte, champs, tableaux
+ Slogan "Plus pres de vos reves" : deja dans les logos PNG (Cormorant
+ Garamond italique), pas besoin d'installer cette police.
+
+ATTENTION
+---------------------------------------------------------------------
+ - Utiliser les PNG dans Glade, pas les SVG (les logos SVG ont besoin
+   des polices installees pour s'afficher correctement).
+ - Ne pas mettre d'accents dans les noms de fichiers/widgets.
+ - Polices sous licences libres (OFL / Apache), fichiers de licence
+   inclus dans 04_polices/.

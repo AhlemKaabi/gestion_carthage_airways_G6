@@ -1,0 +1,1925 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+
+<glade-interface>
+
+<widget class="GtkWindow" id="COMwindowPrincipale">
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Carthage Airways</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="modal">False</property>
+  <property name="default_width">900</property>
+  <property name="default_height">600</property>
+  <property name="resizable">False</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="icon">icone_application_48.png</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+  <signal name="destroy" handler="on_COMwindowPrincipale_destroy" last_modification_time="Mon, 26 Oct 2026 10:00:00 GMT"/>
+
+  <child>
+    <widget class="GtkVBox" id="COMvboxPrincipale">
+      <property name="visible">True</property>
+      <property name="homogeneous">False</property>
+      <property name="spacing">0</property>
+
+      <child>
+	<widget class="GtkImage" id="COMimageEntete">
+	  <property name="visible">True</property>
+	  <property name="pixbuf">bandeau_entete_900x110.png</property>
+	  <property name="xalign">0.5</property>
+	  <property name="yalign">0.5</property>
+	  <property name="xpad">0</property>
+	  <property name="ypad">0</property>
+	</widget>
+	<packing>
+	  <property name="padding">0</property>
+	  <property name="expand">False</property>
+	  <property name="fill">False</property>
+	</packing>
+      </child>
+
+      <child>
+	<widget class="GtkNotebook" id="COMnotebookPrincipal">
+	  <property name="visible">True</property>
+	  <property name="can_focus">True</property>
+	  <property name="show_tabs">True</property>
+	  <property name="show_border">False</property>
+	  <property name="tab_pos">GTK_POS_TOP</property>
+	  <property name="scrollable">True</property>
+	  <property name="enable_popup">False</property>
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxAccueil">
+	      <property name="border_width">14</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkImage" id="COMimageAccueil">
+		  <property name="visible">True</property>
+		  <property name="pixbuf">accueil_608x342.png</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreAccueil">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Bienvenue à bord</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelSousAccueil">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion de la compagnie aérienne</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentBoutonsAccueil">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkHButtonBox" id="COMhbuttonboxAccueil">
+		      <property name="visible">True</property>
+		      <property name="layout_style">GTK_BUTTONBOX_SPREAD</property>
+		      <property name="spacing">14</property>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAccConnexion">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Se connecter</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAccConnexion_clicked" last_modification_time="Mon, 26 Oct 2026 10:00:00 GMT"/>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonSecQuitter">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Quitter</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonSecQuitter_clicked" last_modification_time="Mon, 26 Oct 2026 10:00:00 GMT"/>
+			</widget>
+		      </child>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletAccueil">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Accueil</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_LEFT</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxConnexion">
+	      <property name="border_width">40</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">10</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreConnexion">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Connexion</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentTableConnexion">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkTable" id="COMtableConnexion">
+		      <property name="visible">True</property>
+		      <property name="n_rows">2</property>
+		      <property name="n_columns">2</property>
+		      <property name="homogeneous">False</property>
+		      <property name="row_spacing">8</property>
+		      <property name="column_spacing">8</property>
+
+		      <child>
+			<widget class="GtkLabel" id="COMlabelLogin">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Login :</property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_LEFT</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="left_attach">0</property>
+			  <property name="right_attach">1</property>
+			  <property name="top_attach">0</property>
+			  <property name="bottom_attach">1</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkEntry" id="COMtextLogin">
+			  <property name="width_request">260</property>
+			  <property name="visible">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="editable">True</property>
+			  <property name="visibility">True</property>
+			  <property name="max_length">19</property>
+			  <property name="text" translatable="yes"></property>
+			  <property name="has_frame">True</property>
+			  <property name="invisible_char">●</property>
+			  <property name="activates_default">False</property>
+			</widget>
+			<packing>
+			  <property name="left_attach">1</property>
+			  <property name="right_attach">2</property>
+			  <property name="top_attach">0</property>
+			  <property name="bottom_attach">1</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkLabel" id="COMlabelMdp">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Mot de passe :</property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_LEFT</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="left_attach">0</property>
+			  <property name="right_attach">1</property>
+			  <property name="top_attach">1</property>
+			  <property name="bottom_attach">2</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkEntry" id="COMtextMdp">
+			  <property name="width_request">260</property>
+			  <property name="visible">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="editable">True</property>
+			  <property name="visibility">False</property>
+			  <property name="max_length">19</property>
+			  <property name="text" translatable="yes"></property>
+			  <property name="has_frame">True</property>
+			  <property name="invisible_char">●</property>
+			  <property name="activates_default">False</property>
+			</widget>
+			<packing>
+			  <property name="left_attach">1</property>
+			  <property name="right_attach">2</property>
+			  <property name="top_attach">1</property>
+			  <property name="bottom_attach">2</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelErreurConnexion">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes"></property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_LEFT</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentBoutonsConnexion">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkHButtonBox" id="COMhbuttonboxConnexion">
+		      <property name="visible">True</property>
+		      <property name="layout_style">GTK_BUTTONBOX_DEFAULT_STYLE</property>
+		      <property name="spacing">14</property>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAccValiderConnexion">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Se connecter</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAccValiderConnexion_clicked" last_modification_time="Mon, 09 Nov 2026 19:00:00 GMT"/>
+			</widget>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonSecRetour">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Retour à l'accueil</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonSecRetour_clicked" last_modification_time="Mon, 26 Oct 2026 10:00:00 GMT"/>
+			</widget>
+		      </child>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletConnexion">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Connexion</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_LEFT</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxAdmin">
+	      <property name="border_width">30</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">20</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreAdmin">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Espace administrateur</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentAdminTable">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkTable" id="COMtableAdmin">
+		      <property name="visible">True</property>
+		      <property name="n_rows">3</property>
+		      <property name="n_columns">2</property>
+		      <property name="homogeneous">True</property>
+		      <property name="row_spacing">12</property>
+		      <property name="column_spacing">14</property>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminPassagers">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Gestion des passagers</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminPassagers_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">0</property>
+			  <property name="right_attach">1</property>
+			  <property name="top_attach">0</property>
+			  <property name="bottom_attach">1</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminVols">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Gestion des vols</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminVols_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">1</property>
+			  <property name="right_attach">2</property>
+			  <property name="top_attach">0</property>
+			  <property name="bottom_attach">1</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminReservations">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Gestion des réservations</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminReservations_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">0</property>
+			  <property name="right_attach">1</property>
+			  <property name="top_attach">1</property>
+			  <property name="bottom_attach">2</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminPersonnel">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Personnel navigant</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminPersonnel_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">1</property>
+			  <property name="right_attach">2</property>
+			  <property name="top_attach">1</property>
+			  <property name="bottom_attach">2</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminAvions">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Gestion des avions</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminAvions_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">0</property>
+			  <property name="right_attach">1</property>
+			  <property name="top_attach">2</property>
+			  <property name="bottom_attach">3</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+
+		      <child>
+			<widget class="GtkButton" id="COMboutonAdminAeroports">
+			  <property name="width_request">240</property>
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Gestion des aéroports</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonAdminAeroports_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="left_attach">1</property>
+			  <property name="right_attach">2</property>
+			  <property name="top_attach">2</property>
+			  <property name="bottom_attach">3</property>
+			  <property name="x_options">fill</property>
+			  <property name="y_options"></property>
+			</packing>
+		      </child>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentAdminDeconnexion">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecDeconnexion">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Déconnexion</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecDeconnexion_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletAdmin">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Admin</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxPassager">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkHBox" id="COMhboxEntetePassager">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">14</property>
+
+		  <child>
+			<widget class="GtkLabel" id="COMlabelTitrePassager">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Espace passager</property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_CENTER</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">True</property>
+			  <property name="fill">True</property>
+			</packing>
+		  </child>
+
+		  <child>
+			<widget class="GtkLabel" id="COMlabelConnectePassager">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes"></property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_CENTER</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0.5</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">False</property>
+			  <property name="fill">False</property>
+			</packing>
+		  </child>
+
+		  <child>
+			<widget class="GtkButton" id="COMboutonSecDeconnexionPassager">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Déconnexion</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonSecDeconnexion_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">False</property>
+			  <property name="fill">False</property>
+			</packing>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkNotebook" id="COMnotebookPassager">
+		  <property name="visible">True</property>
+		  <property name="can_focus">True</property>
+		  <property name="show_tabs">True</property>
+		  <property name="show_border">True</property>
+		  <property name="tab_pos">GTK_POS_TOP</property>
+		  <property name="scrollable">False</property>
+		  <property name="enable_popup">False</property>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPassagerInfos">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPassagerInfos">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Mes infos et fidélité</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPassagerVols">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPassagerVols">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Rechercher un vol</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPassagerReserver">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPassagerReserver">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Réserver un vol</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPassagerReservations">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPassagerReservations">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Mes réservations</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPassagerAeroports">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPassagerAeroports">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Aéroports</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">True</property>
+		  <property name="fill">True</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletPassager">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Esp. passager</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxPersonnel">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkHBox" id="COMhboxEntetePersonnel">
+		  <property name="visible">True</property>
+		  <property name="homogeneous">False</property>
+		  <property name="spacing">14</property>
+
+		  <child>
+			<widget class="GtkLabel" id="COMlabelTitrePersonnel">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes">Espace personnel navigant</property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_CENTER</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">True</property>
+			  <property name="fill">True</property>
+			</packing>
+		  </child>
+
+		  <child>
+			<widget class="GtkLabel" id="COMlabelConnectePersonnel">
+			  <property name="visible">True</property>
+			  <property name="label" translatable="yes"></property>
+			  <property name="use_underline">False</property>
+			  <property name="use_markup">False</property>
+			  <property name="justify">GTK_JUSTIFY_CENTER</property>
+			  <property name="wrap">False</property>
+			  <property name="selectable">False</property>
+			  <property name="xalign">0.5</property>
+			  <property name="yalign">0.5</property>
+			  <property name="xpad">0</property>
+			  <property name="ypad">0</property>
+			  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+			  <property name="width_chars">-1</property>
+			  <property name="single_line_mode">False</property>
+			  <property name="angle">0</property>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">False</property>
+			  <property name="fill">False</property>
+			</packing>
+		  </child>
+
+		  <child>
+			<widget class="GtkButton" id="COMboutonSecDeconnexionPersonnel">
+			  <property name="visible">True</property>
+			  <property name="can_default">True</property>
+			  <property name="can_focus">True</property>
+			  <property name="label" translatable="yes">Déconnexion</property>
+			  <property name="use_underline">True</property>
+			  <property name="relief">GTK_RELIEF_NORMAL</property>
+			  <property name="focus_on_click">True</property>
+			  <signal name="clicked" handler="on_COMboutonSecDeconnexion_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+			</widget>
+			<packing>
+			  <property name="padding">0</property>
+			  <property name="expand">False</property>
+			  <property name="fill">False</property>
+			</packing>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<widget class="GtkNotebook" id="COMnotebookPersonnel">
+		  <property name="visible">True</property>
+		  <property name="can_focus">True</property>
+		  <property name="show_tabs">True</property>
+		  <property name="show_border">True</property>
+		  <property name="tab_pos">GTK_POS_TOP</property>
+		  <property name="scrollable">False</property>
+		  <property name="enable_popup">False</property>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPersonnelInfos">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPersonnelInfos">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Mes infos</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPersonnelPlanning">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPersonnelPlanning">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Planning et affectations</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkVBox" id="COMvboxPersonnelAvions">
+		          <property name="border_width">8</property>
+		          <property name="visible">True</property>
+		          <property name="homogeneous">False</property>
+		          <property name="spacing">6</property>
+
+		          <child>
+		    	<placeholder/>
+		          </child>
+		        </widget>
+		        <packing>
+		          <property name="tab_expand">False</property>
+		          <property name="tab_fill">True</property>
+		        </packing>
+		      </child>
+
+		      <child>
+		        <widget class="GtkLabel" id="COMlabelOngletPersonnelAvions">
+		          <property name="visible">True</property>
+		          <property name="label" translatable="yes">Avions</property>
+		          <property name="use_underline">False</property>
+		          <property name="use_markup">False</property>
+		          <property name="justify">GTK_JUSTIFY_CENTER</property>
+		          <property name="wrap">False</property>
+		          <property name="selectable">False</property>
+		          <property name="xalign">0.5</property>
+		          <property name="yalign">0.5</property>
+		          <property name="xpad">0</property>
+		          <property name="ypad">0</property>
+		          <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		          <property name="width_chars">-1</property>
+		          <property name="single_line_mode">False</property>
+		          <property name="angle">0</property>
+		        </widget>
+		        <packing>
+		          <property name="type">tab</property>
+		        </packing>
+		      </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">True</property>
+		  <property name="fill">True</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletPersonnel">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Esp. personnel</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionPassagers">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionPassagers">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion des passagers</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourPassagers">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourPassagers">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionPassagers">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Passagers</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionVols">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionVols">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion des vols</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourVols">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourVols">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionVols">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Vols</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionReservations">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionReservations">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion des réservations</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourReservations">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourReservations">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionReservations">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Réservations</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionPersonnel">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionPersonnel">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion du personnel navigant</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourPersonnel">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourPersonnel">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionPersonnel">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Personnel nav.</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionAvions">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionAvions">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion des avions</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourAvions">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourAvions">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionAvions">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Avions</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+
+
+	  <child>
+	    <widget class="GtkVBox" id="COMvboxGestionAeroports">
+	      <property name="border_width">8</property>
+	      <property name="visible">True</property>
+	      <property name="homogeneous">False</property>
+	      <property name="spacing">6</property>
+
+	      <child>
+		<widget class="GtkLabel" id="COMlabelTitreGestionAeroports">
+		  <property name="visible">True</property>
+		  <property name="label" translatable="yes">Gestion des aéroports</property>
+		  <property name="use_underline">False</property>
+		  <property name="use_markup">False</property>
+		  <property name="justify">GTK_JUSTIFY_CENTER</property>
+		  <property name="wrap">False</property>
+		  <property name="selectable">False</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xpad">0</property>
+		  <property name="ypad">0</property>
+		  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+		  <property name="width_chars">-1</property>
+		  <property name="single_line_mode">False</property>
+		  <property name="angle">0</property>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+
+	      <child>
+		<placeholder/>
+	      </child>
+
+	      <child>
+		<widget class="GtkAlignment" id="COMalignmentRetourAeroports">
+		  <property name="visible">True</property>
+		  <property name="xalign">0.5</property>
+		  <property name="yalign">0.5</property>
+		  <property name="xscale">0</property>
+		  <property name="yscale">1</property>
+		  <property name="top_padding">0</property>
+		  <property name="bottom_padding">0</property>
+		  <property name="left_padding">0</property>
+		  <property name="right_padding">0</property>
+
+		  <child>
+		    <widget class="GtkButton" id="COMboutonSecRetourAeroports">
+		      <property name="visible">True</property>
+		      <property name="can_default">True</property>
+		      <property name="can_focus">True</property>
+		      <property name="label" translatable="yes">Retour</property>
+		      <property name="use_underline">True</property>
+		      <property name="relief">GTK_RELIEF_NORMAL</property>
+		      <property name="focus_on_click">True</property>
+		      <signal name="clicked" handler="on_COMboutonSecRetourAdmin_clicked" last_modification_time="Tue, 10 Nov 2026 20:00:00 GMT"/>
+		    </widget>
+		  </child>
+		</widget>
+		<packing>
+		  <property name="padding">0</property>
+		  <property name="expand">False</property>
+		  <property name="fill">False</property>
+		</packing>
+	      </child>
+	    </widget>
+	    <packing>
+	      <property name="tab_expand">False</property>
+	      <property name="tab_fill">True</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkLabel" id="COMlabelOngletGestionAeroports">
+	      <property name="visible">True</property>
+	      <property name="label" translatable="yes">Aéroports</property>
+	      <property name="use_underline">False</property>
+	      <property name="use_markup">False</property>
+	      <property name="justify">GTK_JUSTIFY_CENTER</property>
+	      <property name="wrap">False</property>
+	      <property name="selectable">False</property>
+	      <property name="xalign">0.5</property>
+	      <property name="yalign">0.5</property>
+	      <property name="xpad">0</property>
+	      <property name="ypad">0</property>
+	      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
+	      <property name="width_chars">-1</property>
+	      <property name="single_line_mode">False</property>
+	      <property name="angle">0</property>
+	    </widget>
+	    <packing>
+	      <property name="type">tab</property>
+	    </packing>
+	  </child>
+	</widget>
+	<packing>
+	  <property name="padding">0</property>
+	  <property name="expand">True</property>
+	  <property name="fill">True</property>
+	</packing>
+      </child>
+    </widget>
+  </child>
+</widget>
+
+</glade-interface>
