@@ -10,7 +10,7 @@ VM Ubuntu, dans un terminal.
 
 ```bash
 git config --global user.name "Prénom Nom"
-git config --global user.email "votre.email@esprit.tn"
+git config --global user.email "votre email github"
 ```
 
 Git signe chaque commit avec ce nom : c'est comme ça qu'on sait qui a fait quoi.
