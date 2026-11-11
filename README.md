@@ -36,11 +36,11 @@ Vous devez avoir accepté l'invitation au dépôt (mail de GitHub) avant de clon
 ## 3. Créer votre branche (une seule fois)
 
 Chacun travaille dans **sa branche**, jamais directement dans `main`.
-Nom : `module-INITIALES` (ex. `vols-MM`, `avions-AK`).
+Nom :`votre-prenom`
 
 ```bash
-git checkout -b vols-MM
-git push -u origin vols-MM
+git checkout -b votre-prenom
+git push -u origin votre-prenom
 ```
 
 - `checkout -b` crée la branche et vous place dessus.
@@ -68,7 +68,6 @@ fc-list | grep -iE "montserrat|roboto"     # doit afficher les polices
 ## 5. Ouvrir le projet dans Glade (à chaque fois)
 
 ```bash
-cd carthage_airways_G6
 ./ouvrir_glade.sh
 ```
 
@@ -81,7 +80,7 @@ Si vous lancez `glade-2` directement, tout apparaît gris.
 ### Où travailler dans Glade
 
 Vous remplissez **seulement les zones vides de VOS onglets**
-(tableau complet dans `README.md` §2) :
+(tableau complet dans section 2) :
 
 | Module | Onglet admin | Onglet(s) passager / personnel |
 |---|---|---|
