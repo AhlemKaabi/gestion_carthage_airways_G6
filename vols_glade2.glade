@@ -1,0 +1,825 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
+
+<glade-interface>
+
+<widget class="GtkWindow" id="MMwindowVols">
+  <property name="visible">True</property>
+  <property name="title" translatable="yes">Gestion des vols</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="modal">False</property>
+  <property name="default_width">920</property>
+  <property name="default_height">640</property>
+  <property name="resizable">True</property>
+  <property name="destroy_with_parent">False</property>
+  <property name="decorated">True</property>
+  <property name="skip_taskbar_hint">False</property>
+  <property name="skip_pager_hint">False</property>
+  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
+  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
+  <property name="focus_on_map">True</property>
+  <property name="urgency_hint">False</property>
+  <property name="border_width">8</property>
+
+  <child>
+    <widget class="GtkVBox" id="MMvboxVols">
+      <property name="visible">True</property>
+      <property name="homogeneous">False</property>
+      <property name="spacing">6</property>
+      <child>
+        <widget class="GtkFrame" id="MMframeInfos">
+          <property name="visible">True</property>
+          <property name="label_xalign">0</property>
+          <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+          <child>
+            <widget class="GtkAlignment" id="MMframeInfosAlign">
+              <property name="visible">True</property>
+              <property name="xalign">0.5</property>
+              <property name="yalign">0.5</property>
+              <property name="xscale">1</property>
+              <property name="yscale">1</property>
+              <property name="top_padding">4</property>
+              <property name="bottom_padding">4</property>
+              <property name="left_padding">12</property>
+              <property name="right_padding">12</property>
+              <child>
+                <widget class="GtkTable" id="MMtableInfos">
+                  <property name="visible">True</property>
+                  <property name="n_rows">8</property>
+                  <property name="n_columns">4</property>
+                  <property name="homogeneous">False</property>
+                  <property name="row_spacing">4</property>
+                  <property name="column_spacing">12</property>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_0_984">
+                      <property name="visible">True</property>
+                      <property name="label">Numéro du vol</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_1_984">
+                      <property name="visible">True</property>
+                      <property name="label">Ville de départ</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_2_984">
+                      <property name="visible">True</property>
+                      <property name="label">Destination</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_3_984">
+                      <property name="visible">True</property>
+                      <property name="label">Date</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryNumVol">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkComboBox" id="MMcomboVilleDep">
+                      <property name="visible">True</property>
+                      <property name="items">Tunis
+  Djerba
+  Monastir
+  Paris
+  Rome
+  Lyon</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkComboBox" id="MMcomboDest">
+                      <property name="visible">True</property>
+                      <property name="items">Tunis
+  Djerba
+  Monastir
+  Paris
+  Rome
+  Lyon</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryDate">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_2_0_984">
+                      <property name="visible">True</property>
+                      <property name="label">Aéroport départ</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">2</property>
+                      <property name="bottom_attach">3</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_2_1_984">
+                      <property name="visible">True</property>
+                      <property name="label">Aéroport arrivée</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">2</property>
+                      <property name="bottom_attach">3</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_2_2_984">
+                      <property name="visible">True</property>
+                      <property name="label">Heure départ</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">2</property>
+                      <property name="bottom_attach">3</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_2_3_984">
+                      <property name="visible">True</property>
+                      <property name="label">Heure arrivée</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">2</property>
+                      <property name="bottom_attach">3</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkComboBox" id="MMcomboAeroDep">
+                      <property name="visible">True</property>
+                      <property name="items">TUN
+  DJE
+  MIR
+  CDG
+  FCO
+  LYS</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">3</property>
+                      <property name="bottom_attach">4</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkComboBox" id="MMcomboAeroArr">
+                      <property name="visible">True</property>
+                      <property name="items">TUN
+  DJE
+  MIR
+  CDG
+  FCO
+  LYS</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">3</property>
+                      <property name="bottom_attach">4</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryHeureDep">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">3</property>
+                      <property name="bottom_attach">4</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryHeureArr">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">3</property>
+                      <property name="bottom_attach">4</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_4_0_984">
+                      <property name="visible">True</property>
+                      <property name="label">Durée (auto)</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">4</property>
+                      <property name="bottom_attach">5</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_4_1_984">
+                      <property name="visible">True</property>
+                      <property name="label">Avion affecté</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">4</property>
+                      <property name="bottom_attach">5</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_4_2_984">
+                      <property name="visible">True</property>
+                      <property name="label">Passagers prévus</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">4</property>
+                      <property name="bottom_attach">5</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_4_3_984">
+                      <property name="visible">True</property>
+                      <property name="label">Prix de base (DT)</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">4</property>
+                      <property name="bottom_attach">5</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryDuree">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                      <property name="editable">False</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">5</property>
+                      <property name="bottom_attach">6</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkComboBox" id="MMcomboAvion">
+                      <property name="visible">True</property>
+                      <property name="items">A320-TS01
+  A319-TS02</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">5</property>
+                      <property name="bottom_attach">6</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkSpinButton" id="MMspinNbPass">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                      <property name="adjustment">0 0 500 1 10 0</property>
+                      <property name="numeric">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">5</property>
+                      <property name="bottom_attach">6</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryPrix">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">5</property>
+                      <property name="bottom_attach">6</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_6_0_984">
+                      <property name="visible">True</property>
+                      <property name="label">Statut</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">6</property>
+                      <property name="bottom_attach">7</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkHBox" id="MMhboxStatut">
+                      <property name="visible">True</property>
+                      <property name="homogeneous">False</property>
+                      <property name="spacing">12</property>
+                      <child>
+                        <widget class="GtkRadioButton" id="MMradioProgramme">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label">Programmé</property>
+                          <property name="active">True</property>
+                          <property name="draw_indicator">True</property>
+                        </widget>
+                        <packing>
+                          <property name="padding">0</property>
+                          <property name="expand">False</property>
+                          <property name="fill">False</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <widget class="GtkRadioButton" id="MMradioAnnule">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label">Annulé</property>
+                          <property name="active">False</property>
+                          <property name="draw_indicator">True</property>
+                          <property name="group">MMradioProgramme</property>
+                        </widget>
+                        <packing>
+                          <property name="padding">0</property>
+                          <property name="expand">False</property>
+                          <property name="fill">False</property>
+                        </packing>
+                      </child>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">7</property>
+                      <property name="bottom_attach">8</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkCheckButton" id="MMcheckInternational">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                      <property name="label">Vol international</property>
+                      <property name="draw_indicator">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">7</property>
+                      <property name="bottom_attach">8</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                </widget>
+              </child>
+            </widget>
+          </child>
+          <child>
+            <widget class="GtkLabel" id="MMframeInfosTitre">
+              <property name="visible">True</property>
+              <property name="label">&lt;b&gt;Informations du vol&lt;/b&gt;</property>
+              <property name="use_markup">True</property>
+            </widget>
+            <packing>
+              <property name="type">label_item</property>
+            </packing>
+          </child>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+      <child>
+        <widget class="GtkHBox" id="MMhboxBoutons">
+          <property name="visible">True</property>
+          <property name="homogeneous">False</property>
+          <property name="spacing">8</property>
+          <child>
+            <widget class="GtkButton" id="MMbtnAjouter">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="label">Ajouter</property>
+              <property name="use_underline">True</property>
+              <property name="relief">GTK_RELIEF_NORMAL</property>
+              <property name="focus_on_click">True</property>
+              <signal name="clicked" handler="on_MMbtnAjouter_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+            </packing>
+          </child>
+          <child>
+            <widget class="GtkButton" id="MMbtnModifier">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="label">Modifier</property>
+              <property name="use_underline">True</property>
+              <property name="relief">GTK_RELIEF_NORMAL</property>
+              <property name="focus_on_click">True</property>
+              <signal name="clicked" handler="on_MMbtnModifier_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+            </packing>
+          </child>
+          <child>
+            <widget class="GtkButton" id="MMbtnSupprimer">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="label">Supprimer</property>
+              <property name="use_underline">True</property>
+              <property name="relief">GTK_RELIEF_NORMAL</property>
+              <property name="focus_on_click">True</property>
+              <signal name="clicked" handler="on_MMbtnSupprimer_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+            </packing>
+          </child>
+          <child>
+            <widget class="GtkButton" id="MMbtnAffecterAvion">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="label">Affecter avion</property>
+              <property name="use_underline">True</property>
+              <property name="relief">GTK_RELIEF_NORMAL</property>
+              <property name="focus_on_click">True</property>
+              <signal name="clicked" handler="on_MMbtnAffecterAvion_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+            </packing>
+          </child>
+          <child>
+            <widget class="GtkButton" id="MMbtnVider">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="label">Vider</property>
+              <property name="use_underline">True</property>
+              <property name="relief">GTK_RELIEF_NORMAL</property>
+              <property name="focus_on_click">True</property>
+              <signal name="clicked" handler="on_MMbtnVider_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+            <packing>
+              <property name="padding">0</property>
+              <property name="expand">False</property>
+              <property name="fill">False</property>
+            </packing>
+          </child>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+      <child>
+        <widget class="GtkFrame" id="MMframeRecherche">
+          <property name="visible">True</property>
+          <property name="label_xalign">0</property>
+          <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+          <child>
+            <widget class="GtkAlignment" id="MMframeRechercheAlign">
+              <property name="visible">True</property>
+              <property name="xalign">0.5</property>
+              <property name="yalign">0.5</property>
+              <property name="xscale">1</property>
+              <property name="yscale">1</property>
+              <property name="top_padding">4</property>
+              <property name="bottom_padding">4</property>
+              <property name="left_padding">12</property>
+              <property name="right_padding">12</property>
+              <child>
+                <widget class="GtkTable" id="MMtableRecherche">
+                  <property name="visible">True</property>
+                  <property name="n_rows">2</property>
+                  <property name="n_columns">4</property>
+                  <property name="homogeneous">False</property>
+                  <property name="row_spacing">4</property>
+                  <property name="column_spacing">12</property>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_0_800">
+                      <property name="visible">True</property>
+                      <property name="label">Départ</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_1_800">
+                      <property name="visible">True</property>
+                      <property name="label">Destination</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkLabel" id="MMlabel_0_2_800">
+                      <property name="visible">True</property>
+                      <property name="label">Date</property>
+                      <property name="xalign">0</property>
+                      <property name="yalign">0.5</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">0</property>
+                      <property name="bottom_attach">1</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryFiltreDep">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">0</property>
+                      <property name="right_attach">1</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryFiltreDest">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">1</property>
+                      <property name="right_attach">2</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkEntry" id="MMentryFiltreDate">
+                      <property name="visible">True</property>
+                      <property name="can_focus">True</property>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">2</property>
+                      <property name="right_attach">3</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                  <child>
+                    <widget class="GtkHBox" id="MMhboxFiltre">
+                      <property name="visible">True</property>
+                      <property name="homogeneous">False</property>
+                      <property name="spacing">8</property>
+                      <child>
+                        <widget class="GtkButton" id="MMbtnFiltrer">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label">Filtrer</property>
+                          <property name="use_underline">True</property>
+                          <property name="relief">GTK_RELIEF_NORMAL</property>
+                          <property name="focus_on_click">True</property>
+                          <signal name="clicked" handler="on_MMbtnFiltrer_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+                        </widget>
+                        <packing>
+                          <property name="padding">0</property>
+                          <property name="expand">False</property>
+                          <property name="fill">False</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <widget class="GtkButton" id="MMbtnReset">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label">Reset</property>
+                          <property name="use_underline">True</property>
+                          <property name="relief">GTK_RELIEF_NORMAL</property>
+                          <property name="focus_on_click">True</property>
+                          <signal name="clicked" handler="on_MMbtnReset_clicked" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+                        </widget>
+                        <packing>
+                          <property name="padding">0</property>
+                          <property name="expand">False</property>
+                          <property name="fill">False</property>
+                        </packing>
+                      </child>
+                    </widget>
+                    <packing>
+                      <property name="left_attach">3</property>
+                      <property name="right_attach">4</property>
+                      <property name="top_attach">1</property>
+                      <property name="bottom_attach">2</property>
+                      <property name="x_options">fill</property>
+                      <property name="y_options" />
+                    </packing>
+                  </child>
+                </widget>
+              </child>
+            </widget>
+          </child>
+          <child>
+            <widget class="GtkLabel" id="MMframeRechercheTitre">
+              <property name="visible">True</property>
+              <property name="label">&lt;b&gt;Recherche / Filtrage&lt;/b&gt;</property>
+              <property name="use_markup">True</property>
+            </widget>
+            <packing>
+              <property name="type">label_item</property>
+            </packing>
+          </child>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+      <child>
+        <widget class="GtkScrolledWindow" id="MMscrollVols">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+          <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+          <property name="shadow_type">GTK_SHADOW_IN</property>
+          <child>
+            <widget class="GtkTreeView" id="MMtreeVols">
+              <property name="visible">True</property>
+              <property name="can_focus">True</property>
+              <property name="headers_visible">True</property>
+              <signal name="row_activated" handler="on_MMtreeVols_row_activated" last_modification_time="Sat, 14 Nov 2026 12:00:00 GMT" />
+            </widget>
+          </child>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">True</property>
+          <property name="fill">True</property>
+        </packing>
+      </child>
+    </widget>
+    <packing>
+      <property name="padding">0</property>
+      <property name="expand">True</property>
+      <property name="fill">True</property>
+    </packing>
+  </child>
+</widget>
+
+</glade-interface>
