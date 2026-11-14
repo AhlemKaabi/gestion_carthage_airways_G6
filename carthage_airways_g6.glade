@@ -1457,7 +1457,7 @@
 
 	    
 		<child>
-			<child>
+<child>
           <object class="GtkFrame" id="MMframeInfos">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -2182,6 +2182,8 @@
                         <attribute name="text">1</attribute>
                       </attributes>
                     </child>
+                  </object>
+                </child>
                 <child>
                   <object class="GtkTreeViewColumn" id="MMcol2">
                     <property name="resizable">True</property>
@@ -2304,9 +2306,8 @@
         </child>
       </object>
     </child>
-	      </child>
-
-	      <child>
+		</child>
+		<child>
 		<widget class="GtkAlignment" id="COMalignmentRetourVols">
 		  <property name="visible">True</property>
 		  <property name="xalign">0.5</property>
