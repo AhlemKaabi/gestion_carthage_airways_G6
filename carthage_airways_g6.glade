@@ -992,10 +992,6 @@
 		          <property name="type">tab</property>
 		        </packing>
 		      </child>
-
-		      <!-- ===================================================
-		           ONGLET PASSAGER : AEROPORTS (recherche ville / code IATA)
-		           =================================================== -->
 		      <child>
 		        <widget class="GtkVBox" id="COMvboxPassagerAeroports">
 		          <property name="border_width">8</property>
@@ -1904,11 +1900,6 @@
 	      <property name="type">tab</property>
 	    </packing>
 	  </child>
-
-
-	  <!-- ===================================================
-	       ONGLET ADMIN : GESTION DES AEROPORTS
-	       =================================================== -->
 	  <child>
 	    <widget class="GtkVBox" id="COMvboxGestionAeroports">
 	      <property name="border_width">8</property>
