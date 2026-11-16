@@ -881,7 +881,505 @@
 		          <property name="spacing">6</property>
 
 		          <child>
-		    	<placeholder/>
+		    	
+  <widget class="GtkVBox" id="MMvboxRechVol">
+    <property name="visible">True</property>
+    <property name="homogeneous">False</property>
+    <property name="spacing">6</property>
+    <child>
+      <widget class="GtkFrame" id="MMframeRechCrit">
+        <property name="visible">True</property>
+        <property name="label_xalign">0</property>
+        <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+        <child>
+          <widget class="GtkAlignment" id="MMframeRechCritAlign">
+            <property name="visible">True</property>
+            <property name="xalign">0.5</property>
+            <property name="yalign">0.5</property>
+            <property name="xscale">1</property>
+            <property name="yscale">1</property>
+            <property name="top_padding">2</property>
+            <property name="bottom_padding">4</property>
+            <property name="left_padding">12</property>
+            <property name="right_padding">12</property>
+            <child>
+              <widget class="GtkTable" id="MMtableRechCrit">
+                <property name="visible">True</property>
+                <property name="n_rows">2</property>
+                <property name="n_columns">4</property>
+                <property name="homogeneous">False</property>
+                <property name="row_spacing">2</property>
+                <property name="column_spacing">12</property>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap1">
+                    <property name="visible">True</property>
+                    <property name="label">Ville de départ</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="right_attach">1</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap2">
+                    <property name="visible">True</property>
+                    <property name="label">Destination</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap3">
+                    <property name="visible">True</property>
+                    <property name="label">Date (jj/mm/aaaa)</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkComboBox" id="MMcomboRechDepart">
+                    <property name="visible">True</property>
+                    <property name="items">Tunis
+Djerba
+Monastir
+Paris
+Rome
+Lyon</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="right_attach">1</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkComboBox" id="MMcomboRechDest">
+                    <property name="visible">True</property>
+                    <property name="items">Tunis
+Djerba
+Monastir
+Paris
+Rome
+Lyon</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkEntry" id="MMentryRechDate">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="max_length">10</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkHBox" id="MMhboxRechBtn">
+                    <property name="visible">True</property>
+                    <property name="homogeneous">False</property>
+                    <property name="spacing">8</property>
+                    <child>
+                      <widget class="GtkButton" id="MMbtnRechercher">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="label">Rechercher</property>
+                        <property name="use_underline">True</property>
+                        <property name="relief">GTK_RELIEF_NORMAL</property>
+                        <property name="focus_on_click">True</property>
+                        <signal name="clicked" handler="on_MMbtnRechercher_clicked" last_modification_time="Sun, 15 Nov 2026 12:00:00 GMT" />
+                      </widget>
+                      <packing>
+                        <property name="padding">0</property>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkButton" id="MMbtnRechReset">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="label">Réinitialiser</property>
+                        <property name="use_underline">True</property>
+                        <property name="relief">GTK_RELIEF_NORMAL</property>
+                        <property name="focus_on_click">True</property>
+                        <signal name="clicked" handler="on_MMbtnRechReset_clicked" last_modification_time="Sun, 15 Nov 2026 12:00:00 GMT" />
+                      </widget>
+                      <packing>
+                        <property name="padding">0</property>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+              </widget>
+            </child>
+          </widget>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="MMframeRechCritTitre">
+            <property name="visible">True</property>
+            <property name="label">&lt;b&gt;Critères de recherche&lt;/b&gt;</property>
+            <property name="use_markup">True</property>
+          </widget>
+          <packing>
+            <property name="type">label_item</property>
+          </packing>
+        </child>
+      </widget>
+      <packing>
+        <property name="padding">0</property>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+      </packing>
+    </child>
+    <child>
+      <widget class="GtkLabel" id="MMlabelRechNb">
+        <property name="visible">True</property>
+        <property name="label">Aucune recherche lancée</property>
+        <property name="xalign">0</property>
+        <property name="yalign">0.5</property>
+      </widget>
+      <packing>
+        <property name="padding">0</property>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+      </packing>
+    </child>
+    <child>
+      <widget class="GtkScrolledWindow" id="MMscrollRechVols">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="height_request">100</property>
+        <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+        <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+        <property name="shadow_type">GTK_SHADOW_IN</property>
+        <child>
+          <widget class="GtkTreeView" id="MMtreeRechVols">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="headers_visible">True</property>
+            <signal name="cursor_changed" handler="on_MMtreeRechVols_cursor_changed" last_modification_time="Sun, 15 Nov 2026 12:00:00 GMT" />
+          </widget>
+        </child>
+      </widget>
+      <packing>
+        <property name="padding">0</property>
+        <property name="expand">True</property>
+        <property name="fill">True</property>
+      </packing>
+    </child>
+    <child>
+      <widget class="GtkFrame" id="MMframeRechDet">
+        <property name="visible">True</property>
+        <property name="label_xalign">0</property>
+        <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+        <child>
+          <widget class="GtkAlignment" id="MMframeRechDetAlign">
+            <property name="visible">True</property>
+            <property name="xalign">0.5</property>
+            <property name="yalign">0.5</property>
+            <property name="xscale">1</property>
+            <property name="yscale">1</property>
+            <property name="top_padding">2</property>
+            <property name="bottom_padding">4</property>
+            <property name="left_padding">12</property>
+            <property name="right_padding">12</property>
+            <child>
+              <widget class="GtkTable" id="MMtableRechDet">
+                <property name="visible">True</property>
+                <property name="n_rows">3</property>
+                <property name="n_columns">6</property>
+                <property name="homogeneous">False</property>
+                <property name="row_spacing">4</property>
+                <property name="column_spacing">10</property>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap4">
+                    <property name="visible">True</property>
+                    <property name="label">Vol :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="right_attach">1</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetVol">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap5">
+                    <property name="visible">True</property>
+                    <property name="label">Trajet :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetTrajet">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap6">
+                    <property name="visible">True</property>
+                    <property name="label">Durée :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">4</property>
+                    <property name="right_attach">5</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetDuree">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">5</property>
+                    <property name="right_attach">6</property>
+                    <property name="top_attach">0</property>
+                    <property name="bottom_attach">1</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap7">
+                    <property name="visible">True</property>
+                    <property name="label">Départ :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="right_attach">1</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetDepart">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="right_attach">2</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap8">
+                    <property name="visible">True</property>
+                    <property name="label">Arrivée :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="right_attach">3</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetArrivee">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">3</property>
+                    <property name="right_attach">4</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMrechCap9">
+                    <property name="visible">True</property>
+                    <property name="label">Prix de base :</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">4</property>
+                    <property name="right_attach">5</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkLabel" id="MMlabelDetPrix">
+                    <property name="visible">True</property>
+                    <property name="label">-</property>
+                    <property name="xalign">0</property>
+                    <property name="yalign">0.5</property>
+                    <property name="selectable">True</property>
+                  </widget>
+                  <packing>
+                    <property name="left_attach">5</property>
+                    <property name="right_attach">6</property>
+                    <property name="top_attach">1</property>
+                    <property name="bottom_attach">2</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="MMbtnReserverVol">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="label">Réserver ce vol</property>
+                    <property name="use_underline">True</property>
+                    <property name="relief">GTK_RELIEF_NORMAL</property>
+                    <property name="focus_on_click">True</property>
+                    <signal name="clicked" handler="on_MMbtnReserverVol_clicked" last_modification_time="Sun, 15 Nov 2026 12:00:00 GMT" />
+                  </widget>
+                  <packing>
+                    <property name="left_attach">4</property>
+                    <property name="right_attach">6</property>
+                    <property name="top_attach">2</property>
+                    <property name="bottom_attach">3</property>
+                    <property name="x_options">fill</property>
+                    <property name="y_options" />
+                  </packing>
+                </child>
+              </widget>
+            </child>
+          </widget>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="MMframeRechDetTitre">
+            <property name="visible">True</property>
+            <property name="label">&lt;b&gt;Détails du vol sélectionné&lt;/b&gt;</property>
+            <property name="use_markup">True</property>
+          </widget>
+          <packing>
+            <property name="type">label_item</property>
+          </packing>
+        </child>
+      </widget>
+      <packing>
+        <property name="padding">0</property>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+      </packing>
+    </child>
+  </widget>
+  <packing>
+    <property name="padding">0</property>
+    <property name="expand">True</property>
+    <property name="fill">True</property>
+  </packing>
 		          </child>
 		        </widget>
 		        <packing>
