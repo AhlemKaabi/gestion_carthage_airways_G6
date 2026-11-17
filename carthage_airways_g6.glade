@@ -1256,7 +1256,136 @@
 		          <property name="spacing">6</property>
 
 		          <child>
-		    	<placeholder/>
+		    	<widget class="GtkVBox" id="AKvboxAvionsPN">
+  <property name="visible">True</property>
+  <property name="homogeneous">False</property>
+  <property name="spacing">10</property>
+  <property name="border_width">15</property>
+
+  <!-- Titre -->
+  <child>
+    <widget class="GtkLabel" id="AKlabelTitreAvionsPN">
+      <property name="visible">True</property>
+      <property name="label" translatable="yes">&lt;b&gt;Rechercher un avion&lt;/b&gt;</property>
+      <property name="use_markup">True</property>
+      <property name="xalign">0</property>
+    </widget>
+    <packing>
+      <property name="padding">0</property>
+      <property name="expand">False</property>
+      <property name="fill">False</property>
+    </packing>
+  </child>
+
+  <!-- Ligne de recherche -->
+  <child>
+    <widget class="GtkHBox" id="AKhboxRechercheAvionPN">
+      <property name="visible">True</property>
+      <property name="homogeneous">False</property>
+      <property name="spacing">8</property>
+
+      <child>
+        <widget class="GtkLabel" id="AKlabelImmatPN">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Immatriculation :</property>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+
+      <child>
+        <widget class="GtkEntry" id="AKentryImmatPN">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="editable">True</property>
+          <property name="max_length">10</property>
+          <property name="width_chars">15</property>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+
+      <child>
+        <widget class="GtkButton" id="AKbuttonRechercherPN">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Rechercher</property>
+          <signal name="clicked" handler="on_AKbuttonRechercherPN_clicked"/>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+
+      <child>
+        <widget class="GtkButton" id="AKbuttonAfficherToutPN">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Afficher tout</property>
+          <signal name="clicked" handler="on_AKbuttonAfficherToutPN_clicked"/>
+        </widget>
+        <packing>
+          <property name="padding">0</property>
+          <property name="expand">False</property>
+          <property name="fill">False</property>
+        </packing>
+      </child>
+    </widget>
+    <packing>
+      <property name="padding">0</property>
+      <property name="expand">False</property>
+      <property name="fill">False</property>
+    </packing>
+  </child>
+
+  <!-- Resultats : treeview dans une zone defilante -->
+  <child>
+    <widget class="GtkScrolledWindow" id="AKscrolledAvionsPN">
+      <property name="visible">True</property>
+      <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+      <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+      <property name="shadow_type">GTK_SHADOW_IN</property>
+
+      <child>
+        <widget class="GtkTreeView" id="AKtreeviewAvionsPN">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="headers_visible">True</property>
+          <property name="rules_hint">True</property>
+          <property name="reorderable">False</property>
+          <property name="enable_search">False</property>
+        </widget>
+      </child>
+    </widget>
+    <packing>
+      <property name="padding">0</property>
+      <property name="expand">True</property>
+      <property name="fill">True</property>
+    </packing>
+  </child>
+
+  <!-- Message (ex: "Avion introuvable") -->
+  <child>
+    <widget class="GtkLabel" id="AKlabelMessagePN">
+      <property name="visible">True</property>
+      <property name="label" translatable="yes"></property>
+      <property name="xalign">0</property>
+    </widget>
+    <packing>
+      <property name="padding">0</property>
+      <property name="expand">False</property>
+      <property name="fill">False</property>
+    </packing>
+  </child>
+</widget>
 		          </child>
 		        </widget>
 		        <packing>
