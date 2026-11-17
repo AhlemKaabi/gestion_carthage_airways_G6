@@ -960,9 +960,7 @@
 		      <property name="spacing">6</property>
 
 		      <child>
-<<<<<<< HEAD
-			<placeholder/>
-=======
+
 		        <widget class="GtkVBox" id="COMvboxPassagerAeroports">
 		          <property name="border_width">8</property>
 		          <property name="visible">True</property>
@@ -1074,7 +1072,7 @@
 		          <property name="tab_expand">False</property>
 		          <property name="tab_fill">True</property>
 		        </packing>
->>>>>>> 01c69ac79e1ee989cfd501df285138ff5d6d5723
+
 		      </child>
 		    </widget>
 		    <packing>
