@@ -282,3 +282,39 @@ void afficher_avions(char *fichier)
     fclose(f);
     printf("--> %d avion(s)\n", nb_avion);
 }
+
+
+/* ================== Recherche (simple) ================== */
+ 
+/*******  SEARCH par immatriculation ********/
+int chercher_avion(char *fichier, char *immat, Avion *a)
+{
+   // return 0 = not found , retun 1 = found
+    FILE *f = fopen(fichier, "r");
+    if (f == NULL)
+        return 0;
+    while (lire_avion(f, a))          /* a est deja un pointeur : pas de & */
+    {
+        if (strcmp(a->immatriculation, immat) == 0)
+        {
+            fclose(f);
+            return 1;                 /* trouve : *a contient l'avion */
+        }
+    }
+    fclose(f);
+    return 0;
+}
+
+
+/* ================== Fonction specifique ================== */
+ 
+/* PlacesDisponibles = CapaciteMax - PlacesReservees */
+int places_disponibles(char *fichier, char *immat, int places_reservees)
+{
+    Avion a;
+    if (!chercher_avion(fichier, immat, &a)) // not found 
+        return -1;
+    if (places_reservees > a.capacite)
+        return 0;                     /* complet */
+    return a.capacite - places_reservees;
+}

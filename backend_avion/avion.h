@@ -26,7 +26,7 @@ typedef struct {
 } Avion;
 
 /* --- CRUD sur le fichier --- */
-int ajouter_avion(char *fichier, Avion a);                  /* 1 ok, 0 deja present, -1 fichier */
+int ajouter_avion(char *fichier, Avion a, char *message);                  /* 1 ok, 0 deja present, -1 fichier */
 int modifier_avion(char *fichier, char *immat, Avion nouv); /* 1 ok, 0 introuvable, -1 fichier */
 int supprimer_avion(char *fichier, char *immat);            /* 1 ok, 0 introuvable, -1 fichier */
 int chercher_avion(char *fichier, char *immat, Avion *a);   /* 1 trouve, 0 sinon */
@@ -34,8 +34,12 @@ int chercher_avion(char *fichier, char *immat, Avion *a);   /* 1 trouve, 0 sinon
 /* --- Controles de saisie : 1 si valide, sinon 0 + message --- */
 int verifier_avion(Avion a, char *message);
 
-/* --- Affichage dans le terminal (filtre "" = tout) ---
+/* --- Affichage dans le terminal  ---
    Projet complet : afficher_avions(GtkWidget *treeview, char *fichier, char *filtre) */
 void afficher_avions(char *fichier);
+
+/* --- Fonction specifique : disponibilite --- */
+int places_disponibles(char *fichier, char *immat, int places_reservees); /* -1 introuvable */
+
 
 #endif

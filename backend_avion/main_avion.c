@@ -15,7 +15,7 @@ static void tester_ajout(Avion a)
         printf("ajout de l'avion avec immatriculation : %-7s est - REFUSE - (message de controle) -> %s\n", a.immatriculation, msg);
         return;
     }
-    res = ajouter_avion(FICHIER_AVIONS, a);
+    res = ajouter_avion(FICHIER_AVIONS, a, msg);
     if (res == 1)
         printf("ajout %-7s : OK\n", a.immatriculation);
     else if (res == 0)
@@ -79,17 +79,22 @@ int main(void)
     nouv = a2; // take an old avion
     nouv.capacite = 72; // edit it
     strcpy(nouv.etat, "En_Maintenance"); // edit it more
+
+    char msg[100]; // a message for error
     if (verifier_avion(nouv, msg)) // check the new avion 
         printf("modif TS-LBF : %s\n", modifier_avion(FICHIER_AVIONS, "TS-LBF", nouv) == 1 ? "OK" : "ECHEC");
     
-    afficher_avions(FICHIER_AVIONS, "");
+    afficher_avions(FICHIER_AVIONS);
 
-    printf("\n=== 4. SUPPRIMER ===\n");
+    printf("\n=== 5. SUPPRIMER ===\n");
     
     printf("suppr TS-IMB : %s\n", supprimer_avion(FICHIER_AVIONS, "TS-IMB") == 1 ? "OK" : "ECHEC");
     printf("suppr TS-XXX : %s\n", supprimer_avion(FICHIER_AVIONS, "TS-XXX") == 1 ? "OK" : "introuvable");
     
-    afficher_avions(FICHIER_AVIONS, "");
+    afficher_avions(FICHIER_AVIONS);
 
-    return 0;
+    printf("\n=== 6. FONCTION SPECIFIQUE : places disponibles ===\n");
+    printf("TS-LBF, 50 reservees -> %d places disponibles\n", places_disponibles(FICHIER_AVIONS, "TS-LBF", 50));
+
+   return 0;
 }
